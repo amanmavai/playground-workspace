@@ -20,3 +20,15 @@ graph TD
         I --> J[WebSocket Service]
     end
 ```
+
+```mermaid
+graph TD
+    A[Design System] --> B[Base Components]
+    B --> C[Clinical Components]
+    C --> D[Feature Components]
+    D --> E[Page Components]
+    
+    F[Shared Hooks] --> D
+    G[Utils] --> D
+
+```
