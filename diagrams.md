@@ -45,3 +45,63 @@ graph LR
     D --> G[Lazy Loaded Features]
     D --> H[Dynamic Imports]
 ```
+
+```mermaid
+graph TD
+    subgraph "Frontend Shell Application"
+        A[Shell - Vite + React 18]
+        B[Authentication Module]
+        C[Shared Dependencies]
+    end
+
+    subgraph "Micro Frontends"
+        D[Patient Dashboard MFE]
+        E[Clinical Data MFE]
+        F[Admin MFE]
+    end
+
+    subgraph "Shared Core"
+        G[Design System - Mantine]
+        H[State Management]
+        I[Utility Layer]
+    end
+
+    A --> B
+    A --> D
+    A --> E
+    A --> F
+    
+    D & E & F --> G
+    D & E & F --> H
+    D & E & F --> I
+```
+
+```mermaid
+graph TD
+    subgraph "Core Technologies"
+        A[React 18 + TypeScript]
+        B[Vite Build System]
+        C[Module Federation]
+    end
+
+    subgraph "State Management"
+        D[Zustand - Global State]
+        E[TanStack Query - Server State]
+        F[React Hook Form - Form State]
+    end
+
+    subgraph "UI Layer"
+        G[Mantine Components]
+        H[Tailwind CSS]
+        I[CSS Modules]
+    end
+
+    subgraph "Data Visualization"
+        J[Visx/D3 - Charts]
+        K[TanStack Table - Data Grids]
+    end
+
+    A --> D & E & F
+    A --> G & H & I
+    A --> J & K
+```
