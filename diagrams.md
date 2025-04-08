@@ -32,3 +32,16 @@ graph TD
     G[Utils] --> D
 
 ```
+
+```mermaid
+graph LR
+    A[Entry Point] --> B[Route Based Code Splitting]
+    B --> C[Shared Chunks]
+    B --> D[MFE Specific Code]
+    
+    C --> E[Vendor Bundle]
+    C --> F[Common Components]
+    
+    D --> G[Lazy Loaded Features]
+    D --> H[Dynamic Imports]
+```
